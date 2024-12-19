@@ -49,7 +49,7 @@ services:
  
   scenium-node:
     build:
-      context: .
+      context: ./src
       dockerfile: Dockerfile
     container_name: scenium-node
     working_dir: /app
