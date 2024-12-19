@@ -68,7 +68,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.scenium.rule=Host(`185.98.128.52`)"
-      - "traefik.http.routers.scenium.entrypoints=websecure"
+      - "traefik.http.routers.scenium.entrypoints=https"
       - "traefik.http.routers.scenium.tls.certresolver=letsencrypt"
       
 networks:
