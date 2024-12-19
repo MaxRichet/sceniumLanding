@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017" # Expose MongoDB localement
+    volumes:
+      - ./db:/data/db # Persiste les données dans le dossier local ./db
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./src
+    container_name: backend
+    ports:
+      - "5001:5001" # Expose le backend sur localhost:5000
+    volumes:
+      - ./src:/app # Monte les fichiers locaux dans le conteneur pour dev
+      - /app/node_modules
+    depends_on:
+      - mongodb # Démarre MongoDB avant le backend
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/emailscenium
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./client
+    container_name: frontend
+    ports:
+      - "3000:80" # Expose le frontend sur localhost:3000
+    depends_on:
+      - backend # S'assure que le backend démarre avant le frontend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
