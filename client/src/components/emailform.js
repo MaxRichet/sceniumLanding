@@ -29,7 +29,7 @@ const EmailForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder='max@gmail.com'
+          placeholder='E-mail'
         />
       <button type="submit">Envoyer</button>
       </div>

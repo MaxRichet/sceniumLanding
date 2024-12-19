@@ -1,0 +1,242 @@
+:root{
+  --white: #FFFDFD;
+  --black: #151415;
+  --title: 45px;
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url(../fonts/grotesk/SchibstedGrotesk-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'Montserrat';
+  background-color: var(--black);
+  color: var(--white);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  height: 10vh;
+}
+
+nav > img{
+  width: 150px;
+}
+
+nav > ul{
+  display: flex;
+}
+
+nav > ul > li{
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav > ul > li > a{
+  text-decoration: none;
+  color: var(--white);
+  font-size: 20px
+}
+
+nav > button{
+  border: 1px solid var(--white);
+  padding: 10px 19px;
+  background: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.intro{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0) 75%), url(../img/fond.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  display: flex;
+  height: 90vh;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.intro > h1{
+  margin: 0 0 50px 100px;
+}
+
+.intro > a{
+  text-decoration: none;
+  color: var(--white);
+  border: 3px solid var(--white);
+  padding: 15px 10px;
+  font-size: 22px;
+  margin: 0 100px 50px 0px;
+}
+
+.presentation {
+  font-size: 25px;
+  padding: 60px 285px;
+  text-align: justify;
+}
+
+.boxCardContainer{
+  text-align: center;
+}
+
+.boxCardContainer > h1{
+  font-size: var(--title);
+  margin-bottom: 30px;
+}
+
+.cardContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.boxCard {
+  margin: 0 20px;
+  text-align: start;
+}
+
+.boxCard > img{
+  margin-bottom: 13px;
+}
+
+.howItWork{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.howItWork > h1{
+  margin-bottom: 40px;
+  font-size: var(--title);
+}
+
+.howItWork > p{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.howItWork > p > span{
+  margin-right: 15px;
+}
+
+.advantagesContainer{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.advantagesContainer > h1{
+  margin-bottom: 40px;
+  font-size: var(--title);
+}
+
+.detailsAdvantage{
+  display: flex;
+  margin: 0px 400px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.advantage{
+  width: 300px;
+  margin: 10px 80px;
+}
+
+.advantage > img{
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.advantage > h1{
+  font-size: 25px;
+}
+
+.advantage > p{
+  font-size: 17px;
+  margin-top: 13px;
+}
+
+.contact{
+  margin-top: 60px;
+}
+
+.contact > h1{
+  font-size: var(--title);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.input input {
+  background: none;
+  border: 1px solid var(--white);
+  padding: 10px 5px;
+  width: 400px;
+}
+
+.input button {
+  background: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding: 9px 20px;
+  margin-top: 20px;
+}
+
+footer{
+  margin: 40px 60px 0 60px;
+  border-top: 2px solid var(--white);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.rs {
+  display: flex;
+  align-items: flex-end;
+}
+
+.rs img {
+  width: 60px;
+}
+
+.copyright{
+  text-align: center;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+
+.footer > img{
+  width: 300px;
+}
