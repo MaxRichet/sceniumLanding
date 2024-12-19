@@ -55,7 +55,7 @@ services:
     working_dir: /app
     command: /bin/sh -c 'npm install && npm run start'
     ports:
-      - '3007:3007'
+      - '5001:5001'
     volumes:
       - './:/app'
     depends_on:
@@ -70,7 +70,7 @@ services:
       - "traefik.http.routers.scenium.rule=Host(`185.98.128.52`)"
       - "traefik.http.routers.scenium.entrypoints=https"
       - "traefik.http.routers.scenium.tls.certresolver=letsencrypt"
-      
+      - "traefik.http.services.scenium.loadbalancer.server.port=5001"
 networks:
   rooting:
     external: true
