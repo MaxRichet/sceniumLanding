@@ -2,7 +2,7 @@
 FROM node:18
 
 WORKDIR /app
-COPY package*.json ./
+COPY ./package.json ./
 RUN npm install
 
 # Étape 2 : Copier les fichiers sources
