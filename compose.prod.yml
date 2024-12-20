@@ -67,10 +67,6 @@ services:
       - MONGO_URL=mongodb://scenium-mongodb:27017/sceniumdb
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.scenium.rule=Host(`scenium.devprod.fr`)"
-      - "traefik.http.routers.scenium.entrypoints=https"
-      - "traefik.http.routers.scenium.tls.certresolver=letsencrypt"
-      - "traefik.http.services.scenium.loadbalancer.server.port=5001"
 networks:
   rooting:
     external: true
