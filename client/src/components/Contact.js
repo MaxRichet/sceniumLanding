@@ -1,5 +1,5 @@
 import React from 'react';
-import EmailForm from '../components/EmailForm';
+import EmailForm from '../components/emailform.js';
 
 const Contact = () => {
   return (

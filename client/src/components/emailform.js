@@ -8,7 +8,7 @@ const EmailForm = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5001/sendemail', { email });
+      const response = await axios.post('https://vps108100.serveur-vps.net//sendemail', { email });
       if (response.status === 201) {
         alert('Email enregistré avec succès !');
       } else {
